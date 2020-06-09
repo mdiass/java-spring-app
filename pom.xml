@@ -67,7 +67,7 @@
         <!-- AWS dependencies -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-aws</artifactId>
+            <artifactId>spring-cloud-aws-context</artifactId>
             <version>2.2.2.RELEASE</version>
         </dependency>
         <dependency>
@@ -81,6 +81,18 @@
             <version>1.5.1</version>
         </dependency>
     </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>com.amazonaws</groupId>
+                <artifactId>aws-java-sdk-bom</artifactId>
+                <version>1.11.327</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
 
     <build>
         <plugins>
